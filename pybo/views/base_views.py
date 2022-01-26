@@ -6,6 +6,8 @@ from ..models import Question
 
 
 def index(request):
+    3/0
+
     # 입력 파라미터
     page = request.GET.get('page', '1')  # 페이지, '1' 은 디폴트 값을 준 것
     kw = request.GET.get('kw','') # 검색어
@@ -40,6 +42,3 @@ def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     context = {'question': question}
     return render(request, 'pybo/question_detail.html', context)
-
-def index(request):
-    3/0
