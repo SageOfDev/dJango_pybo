@@ -21,15 +21,8 @@ def signup(request):
     return render(request, 'common/signup.html', {'form': form})
 
 
-def page_not_found_404(request, exception):
+def page_not_found(request, exception):
     """
     404 Page not found
     """
-    return render(request, 'common/404.html', {}, status=404)
-
-
-def page_not_found_500(request, exception):
-    """
-    500 Page not found
-    """
-    return render(request, 'common/500.html', {}, status=500)
+    return render(request, 'common/404.html', {})
