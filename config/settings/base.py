@@ -149,6 +149,9 @@ LOGGING = {
             'format': '[{server_time}] {message}',
             'style': '{',
         },
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
     },
     'handlers': {
         'console': {
@@ -160,9 +163,6 @@ LOGGING = {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
             'formatter': 'django.server',
-        },
-        'standard': {
-            'format': '%(asctimes)s [%(levelname)s%] %(name)s: %(message)s'
         },
         'mail_admins': {
             'level': 'ERROR',
