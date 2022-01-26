@@ -24,4 +24,4 @@ urlpatterns = [
     path('', base_views.index, name='index'),  # '/'에 해당하는 path
 ]
 
-# handler404 = 'common.views.page_not_found'
+handler404 = 'common.views.page_not_found'
