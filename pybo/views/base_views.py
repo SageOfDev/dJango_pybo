@@ -4,9 +4,12 @@ from django.db.models import Q, Count
 
 from ..models import Question
 
+import logging
+logger = logging.getLogger('pybo')
+
 
 def index(request):
-    3/0
+    logger.info("INFO 레벨로 출력")
 
     # 입력 파라미터
     page = request.GET.get('page', '1')  # 페이지, '1' 은 디폴트 값을 준 것
